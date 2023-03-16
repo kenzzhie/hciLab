@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    font-weight: lighter;
+    font-size: small;
+}
+
+@font-face{
+    font-family: HYWenHei;
+    src: url('assets/Genshin-Impact-Font/zh-cn.ttf');
+}
+header{
+    position: relative;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+    /* background: linear-gradient(180deg, rgba(75, 68, 68, 0.85) 0%, rgba(76, 76, 76, 0) 100%); */
+    background-color: rgb(28, 28, 28);
+}
+
+.nav-right{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    
+}
+
+
+
+.login{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: larger;
+    color: white;
+}
+
+.login:hover{
+    color: lightblue;
+    font-weight: 900;
+    transition: all 0.2s;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo{
+    cursor: pointer;
+    font-size: larger;
+    left: 0;
+}
+
+
+.logoImg{
+    width: 75%;
+    height: 50%;
+}
+
+.nav1 {
+    list-style: none;
+    display: flex;
+}
+
+.nav1 li {
+    /* display: inline; */
+    padding: 0 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+    color: white;
+}
+
+.navItem :hover{
+    color: lightblue;
+    transition: all 0.2s;
+    font-weight: 800;
+}
+
+#menuBar{
+    text-align: center;
+    color: white;
+    display: none;
+}
+
+.dropdown{
+    display: none;
+}
+
+@media screen and (max-width: 900px){
+    .nav-right{
+        display: none;
+    }
+    #menuBar{
+        display: block;
+        font-size: larger;
+        cursor: pointer;
+    }
+
+
+
+    .dropdown li{
+        list-style: none;
+    }
+
+    .dropdown{
+        color: white;
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        height: 50vh;
+        top: -10000px;
+        text-align: center;
+        transition: all 0.5s ease;
+        background-color: rgb(28, 28, 28);
+
+    }
+
+    .dropdown li{
+        color: white;
+        padding: 2rem;
+    }
+
+    .dropdown.active{
+        position: fixed;
+        background-color: rgb(28, 28, 28);
+        opacity: 0.7;
+        top: 73px;
+        transition: all 0.5s ease;
+        height: 50vh;
+        font-size: 1.6rem;
+        z-index: 20;
+    }
+
+
+}
+
+/* carousel */
+
+button {
+    color: black;
+}
+
+.carousel {
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    /* border: 5px solid black; */
+}
+
+.carousel-slide{
+    display: flex;
+    width: max-content;
+}
+
+.carousel-slide-img {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-text{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.carousel-text-header p{
+    font-family: HYWenHei;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.carousel-text-desc{
+    width: 50%;
+    margin-bottom: 3em;
+    margin-top: 3em;
+}
+
+.learn-more{
+    font-family: HYWenHei;
+    align-items: center;
+    background-color: black;
+    border-radius: 8px;
+    border-style: none;
+    box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    /* font-family: "RM Neue",sans-serif; */
+    line-height: 1.15;
+    padding: 7px 10px;
+    text-align: center;
+    transition: color .13s ease-in-out,background .13s ease-in-out,opacity .13s ease-in-out,box-shadow .13s ease-in-out;
+}
+
+
+.learn-more:hover{
+    background-color: rgb(49, 48, 48) ;
+}
+
+#lastClone{
+    /* background-image: url(assets/Sumeru_City.webp); */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(assets/Sumeru_City.webp);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+#mondstat{
+    /* background-image: url(assets/Mondstadt.webp); */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(assets/Mondstadt.webp);
+    background-size:cover;
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+#liyue{
+    /* background-image: url(assets/liyue.jpg); */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(assets/liyue.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+#inazuma{
+    /* background-image: url(assets/inazuma.jpg); */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(assets/inazuma.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+#sumeru{
+    /* background-image: url(assets/Sumeru_City.webp); */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(assets/Sumeru_City.webp);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+#firstClone{
+    /* background-image: url(assets/Mondstadt.webp); */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(assets/Mondstadt.webp);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+
+
+#prevBtn{
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    left: 3%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+#nextBtn{
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    right: 3%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.more-wrap{
+ /* padding-top: 120px; */
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column; 
+}
+
+.moreHeader{
+    display: flex;
+    align-items: flex-start;
+    gap: 1em;
+    text-align: left;
+}
+
+.moreHeader p{
+    font-family: HYWenHei;
+    font-size: x-large;
+}
+
+.moreP{
+    top: 50%;
+    width: 35%;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.mondstatMore{
+    /* background-image: url(assets/mondstat2.jpg); */
+    background: linear-gradient(88.75deg, rgba(0, 0, 0, 0.5) -4.14%, rgba(0, 0, 0, 0) 91.05%), url(assets/mondstat2.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.liyueMore{
+    /* background-image: url(assets/Liyue2.webp); */
+    background: linear-gradient(85.3deg, rgba(0, 0, 0, 0.6) 12.58%, rgba(0, 0, 0, 0) 69.1%), url(assets/Liyue2.webp);
+    background-size: cover;
+    
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.inazumaMore{
+    background-image: url(assets/inazuma2.webp);
+    background-size: cover;
+    object-fit: fill;
+    
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.sumeruMore{
+    /* background-image: url(/assets/sumerumore.jpg); */
+    background: linear-gradient(77.9deg, rgba(0, 0, 0, 0.5) 24.34%, rgba(0, 0, 0, 0) 77.12%), url(assets/sumerumore.jpg);
+    background-size: cover;
+    
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.fadeinLeft{
+    animation: fadeInLeft 1.2s both;
+}
+
+@keyframes fadeInLeft{
+    0%{
+        opacity: 0;
+        -webkit-transform: translateX(-50px);
+    }
+
+    100%{
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .more-wrap{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .moreHeader p{
+        font-size: x-large;
+    }
+    
+    .moreInfo{
+        margin-left: 0;
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+        /* text-align: center; */
+    }
+
+    .moreP{
+        margin-left: 0;
+        text-align: center;
+        font-size: 13px;
+        word-spacing: 0.2em;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .more-wrap{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    /* .moreHeader{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    } */
+    .moreHeader p{
+        font-size: x-large;
+    }
+    .moreInfo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* text-align: center; */
+    }
+
+    .moreP{
+        width: 50%;
+        text-align: center;
+        font-size: 10px;
+        word-spacing: 0.2em;
+    }
+}
+
+footer{
+    height: 90%;
+    background-color: black;
+    color: white;
+}
+
+.sosmed{
+    background-color: rgb(20, 40, 40);
+    display: flex;
+    justify-content: flex-start;
+    gap: 1vw;
+}
+
+.icons{
+    margin-left: 4vw;
+}
+
+.sosmed i{
+    font-size: 20px;
+    padding: 1vw;
+    color: white;
+    opacity: 0.5;
+    /* background-color: antiquewhite; */
+}
+
+.sosmed a :hover{
+    color: white;
+    opacity: 1;
+}
+
+.footerAsli{
+    color: white;
+    text-align: center;
+}
+
+.logo-footer{
+    margin-top: 10vh;
+}
+
+.footer-link{
+    margin-top: 5vh;
+    margin-bottom: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+.footer-link p{
+    color: white;
+    opacity: 0.5;
+}
+
+.footer-link a :hover{
+    color: white;
+    opacity: 1;
+}
+
+.footer-sisa{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.footer-sisa p{
+    color: white;
+}
+
+.footer-sisa-p p{
+    color: white;
+    opacity: 0.8;
+    margin-bottom: 5vh;
+}
+
+@media screen and (max-width: 768px) {
+    footer{
+        height: 40%;
+        font-size: 10px;
+    }
+
+    .footer-sisa-p{
+        display: none;
+    }
+
+    .footer-link{
+        margin-top: 2vh;
+        margin-bottom: 3vh;
+    }
+
+    .logo-footer{
+        scale: 0.8;
+        margin-top: 5vh;
+    }
+
+
+}
+
+@media screen and (max-width: 500px) {
+    .logo-footer{
+        scale: 0.7;
+    }
+    
+    footer p{
+        font-size: 10px;
+    }
+
+    .footer-sisa img {
+        display: none;
+    }
+
+}
+
